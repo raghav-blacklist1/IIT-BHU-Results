@@ -25,10 +25,8 @@ try:
 	open_roll(N)
 except pickle.UnpicklingError:
 	content = open('Finals','rb').read()
-	with open('Finals','wb') as output:
-		for line in content.splitlines():
-			print(line)
-			output.write(line + str.encode('\n'))
+	for line in content.splitlines():
+		print(line)
 	open_roll(N)
 except Exception as ex:
 	print(ex)
